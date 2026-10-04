@@ -18,6 +18,7 @@ GPD is for hard physics research problems that cannot be handled reliably with m
 
 It is designed for long-horizon projects that require rigorous verification, structured research memory, multi-step analytical work, complex numerical studies, and manuscript writing or review.
 
+**This repository also documents a learning-engine extension built on top of GPD.** The base GPD framework handles research workflow orchestration; the added learning layer handles mastery-bounded active recall, independent assessment, persistent concept memory, FSRS/Bjork review scheduling, explanation caching, and a dedicated `gpd-learning` MCP server. See [`LEARNING_ENGINE_EXTENSION.md`](LEARNING_ENGINE_EXTENSION.md) for the contribution map.
 
 We welcome contributions and feedback via GitHub issues or pull requests; if GPD is useful in your work, please star the repo, and share it with colleagues who might benefit.
 
@@ -416,7 +417,9 @@ For full per-command detail and examples inside your runtime, run `/gpd:help --a
 
 ## Learning Engine
 
-GPD includes a Feynman-style active recall system based on the principle: *"What I cannot create, I do not understand."*
+The learning engine is the extension layer in this repository, built on top of the base GPD research-workflow framework. GPD handles the broader research lifecycle; this layer adds Feynman-style active recall, mastery assessment, persistent concept memory, review scheduling, and learning-specific MCP state management. For a concise map of what is unique to the extension, see [`LEARNING_ENGINE_EXTENSION.md`](LEARNING_ENGINE_EXTENSION.md).
+
+The learning system is based on the principle: *"What I cannot create, I do not understand."*
 
 The `learn` command runs a mastery-bounded loop:
 
